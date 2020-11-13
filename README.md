@@ -5,7 +5,7 @@
 
 #### API Call Flow
 
-POST /job
+POST /jobs
 {
     sourceVideoUrls: ["", ""]
     destination: {

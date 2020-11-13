@@ -22,6 +22,3 @@ returns
 {
     status: "pending"
 }
-
-### borrowed code
-in-process loop borrowed from here: https://stackoverflow.com/questions/36904430/how-to-have-my-nodejs-app-run-in-a-loop-for-ever

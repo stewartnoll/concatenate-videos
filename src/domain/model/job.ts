@@ -1,5 +1,5 @@
 export class Destination {
-    constructor(public fileUrl: string) { }
+    constructor(public directory: string) { }
 }
 
 export class CreateJobRequest {

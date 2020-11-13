@@ -1,6 +1,7 @@
 import bodyParser from 'body-parser';
 import express from 'express'
 import { createJob, getStatus } from './controllers/jobsController'
+import { processNextJob } from './domain/jobService'
 
 const app = express();
 const PORT = 8000;
@@ -16,8 +17,5 @@ app.listen(PORT, () => {
 });
 
 // todo: move to actual background service
-function execute(){
-    console.log('hello')    
-}
-
-setInterval(execute, 2000)
+// in-process loop workaround borrowed from here: https://stackoverflow.com/questions/36904430/how-to-have-my-nodejs-app-run-in-a-loop-for-ever
+setInterval(processNextJob, 2000)

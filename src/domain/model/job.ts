@@ -9,3 +9,14 @@ export class CreateJobRequest {
 export class CreateJobResponse {
     constructor(public id: string) {}
 }
+
+export enum Status {
+    pending,
+    inProgress,
+    done,
+    error
+}
+
+export class Job {
+    constructor(public id: string, public sourceVideoUrls:string[], public destination: Destination, public status: Status) { }
+}

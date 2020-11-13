@@ -1,8 +1,11 @@
+import bodyParser from 'body-parser';
 import express from 'express'
 import { createJob } from './controllers/jobsController'
 
 const app = express();
 const PORT = 8000;
+
+app.use(bodyParser.json())
 
 app.get('/', (req,res) => res.send('Hello World!'));
 

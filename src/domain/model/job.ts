@@ -20,3 +20,7 @@ export enum Status {
 export class Job {
     constructor(public id: string, public sourceVideoUrls:string[], public destination: Destination, public status: Status) { }
 }
+
+export class GetJobStatusResponse {
+    constructor(public status: string) { }
+}
